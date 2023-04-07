@@ -3,7 +3,7 @@
     <apiVersion>56.0</apiVersion>
 	<isExposed>true</isExposed>
 	<masterLabel>iFramed</masterLabel>
-	<description>Lightning Web Component that displays an iFrame</description>
+	<description>Lightning Web Component that displays an iFrame with dynamic templates</description>
 	<targets>
 		<target>lightning__RecordPage</target>
 		<target>lightning__AppPage</target>
@@ -13,9 +13,12 @@
 
 	<targetConfigs>
 		<targetConfig targets="lightning__RecordPage,lightning__AppPage,lightning__HomePage,lightningCommunity__Default">
-			<property name="url" label="URL for iFrame" description="URL for iFrame. The URL should also be added to setup > CSP Trusted Sites" type="String" required="true" default="https://example.com"/>
 			<property name="width" label="Width for iFrame" type="String" default="100%"/>
 			<property name="height" label="Height for iFrame" type="String" default="500px"/>
+			<property name="url" label="URL for iFrame" description="URL hostname for iFrame. Can include template like {Account.Field__c}. The URL should also be added to setup > CSP Trusted Sites" type="String" default="https://example.com"/>
+			<property name="params" label="Parameters for the URL" description="Append params via hardcode or template ie ?status=open or ?status={Account.Status}" type="String" />
+			<property name="recordId" label="Record Id" description="Used to get URL hostname not provided ie url and/or params" type="String" />
+			<property name="debug" label="Debug" description="Show button used to log out component info" type="Boolean" default="false" />
 		</targetConfig>
 	</targetConfigs>
 </LightningComponentBundle>

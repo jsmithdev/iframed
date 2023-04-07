@@ -46,15 +46,19 @@ sfdx force:mdapi:deploy -d deploy -w -1 --verbose
 Results should more or less mirror below
 
 ```bash
-Using specified username me(a)jsmith.dev
 
-Job ID | 0Af1U000015XR14SAG
-MDAPI PROGRESS | ████████████████████████████████████████ | 10/10 Components
+Deploying metadata to me(a)jsmith.dev using the v57.0 SOAP API
+Deploy ID: 0Af1U00001C8TTQSA3
+DEPLOY PROGRESS | ████████████████████████████████████████ | 3/3 Components
 
-TYPE FILE NAME ID
-──────────────────────── ──────────────────────────────────── ────────────────────────── ──────────────────
-deploy/package.xml package.xml
-ExampleClass deploy/classes/Example.cls Example 01p1U00000QWibCQAT
+=== Deployed Source
+
+ Type                     File                        Name        Id                 
+ ──────────────────────── ─────────────────────────── ─────────── ────────────────── 
+                          zip/package.xml             package.xml                    
+ ApexClass                zip/classes/Iframed.cls     Iframed     01p1U00000R33BiQAJ 
+ ApexClass                zip/classes/IframedTest.cls IframedTest 01p1U00000R33BjQAJ 
+ LightningComponentBundle zip/lwc/iframed             iframed     0Rb1U000000D4IpSAK 
 ```
 
 ---

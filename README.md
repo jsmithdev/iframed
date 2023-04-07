@@ -1,6 +1,6 @@
 # iFramed
 
-An LWC component to embed a URL in an iframe in Salesforce via Builder
+An LWC component to embed a URL in an iframe with template syntax support
 
 ## Usage
 
